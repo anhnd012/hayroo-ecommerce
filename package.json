@@ -1,0 +1,20 @@
+{
+  "name": "mern_stack_project_ecommerce_hayroo-master",
+  "version": "1.0.0",
+  "description": "[![Alt text](https://img.youtube.com/vi/lXk14qt2D28/0.jpg)](https://www.youtube.com/watch?v=lXk14qt2D28)",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix server",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-server & npm run install client",
+    "client": "npm start --prefix client",
+    "server": "npm run watch --prefix server",
+    "watch": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
