@@ -32,7 +32,7 @@ const Navber = (props) => {
       {/* Navber Section */}
       <nav className="fixed top-0 w-full z-20 shadow-lg lg:shadow-none bg-white">
         <div className="m-4 md:mx-12 md:my-6 grid grid-cols-4 lg:grid-cols-3">
-          <div className="lg:block col-span-1 flex text-gray-600 mt-1">
+          <div className="hidden lg:block col-span-1 flex text-gray-600 mt-1">
             <span
               className="hover:bg-gray-200 px-4 py-3 rounded-lg font-light tracking-widest hover:text-gray-800 cursor-pointer"
               onClick={(e) => history.push("/")}
@@ -52,10 +52,10 @@ const Navber = (props) => {
               Contact us
             </span>
           </div>
-          <div className="col-span-2 flex justify-items-stretch items-center">
+          <div className="col-span-2 lg:hidden flex justify-items-stretch	 items-center">
             <svg
               onClick={(e) => navberToggleOpen()}
-              className="col-span-1 w-8 h-8 cursor-pointer text-gray-600"
+              className="col-span-1 lg:hidden w-8 h-8 cursor-pointer text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -79,11 +79,11 @@ const Navber = (props) => {
           <div
             onClick={(e) => history.push("/")}
             style={{ letterSpacing: "0.70rem" }}
-            className="lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
+            className="hidden lg:block flex items-left col-span-1 text-center text-gray-800 font-bold tracking-widest uppercase text-2xl cursor-pointer"
           >
             Hayroo
           </div>
-          <div className="flex items-right col-span-1 lg:col-span-1 flex justify-end">
+          <div className="flex items-right col-span-2 lg:col-span-1 flex justify-end">
             {/*  WishList Page Button */}
             <div
               onClick={(e) => history.push("/wish-list")}
