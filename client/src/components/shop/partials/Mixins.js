@@ -1,13 +1,6 @@
 export const subTotal = (id, price) => {
-  let subTotalCost = 0;
   let carts = JSON.parse(localStorage.getItem("cart"));
-  if (carts) {
-    carts.forEach((item) => {
-      if (item.id === id) {
-        subTotalCost = item.quantitiy * price;
-      }
-    });
-  }
+  let subTotalCost = carts.filter((items) => items.id === id ).reduce((total, item) => total + item.quantitiy * price, 0);
   return subTotalCost;
 };
 
